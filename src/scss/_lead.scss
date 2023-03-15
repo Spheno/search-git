@@ -1,0 +1,66 @@
+.lead {
+  @extend %flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.lead__title {
+  @extend %font-h1;
+  align-self: flex-start;
+  margin: 0 0 10px 50px;
+}
+
+.search {
+  @extend %flex;
+  width: 90%;
+  position: relative;
+}
+
+.search__input {
+  min-width: 100%;
+  min-height: 50px;
+  padding: 0 20px 0;
+  border-radius: 10px;
+  background-color: $backgroundInput;
+  color: $mainColor;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
+.search__input_invalid {
+  color: $errorColor;
+}
+
+.search__input-error {
+  color: $errorColor;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+}
+
+.search__button {
+  border: 1px solid $mainColor;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: $mainColor;
+  background-image: url(../images/4016912.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 20px;
+
+  &:disabled {
+    background-color: $backgroundColor;
+    border: 2px solid $backgroundInput;
+    cursor: default;
+    background-image: url(../images/4016891.png);
+  }
+}

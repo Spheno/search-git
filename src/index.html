@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск по github</title>
+</head>
+
+<body class="page">
+
+  <main>
+
+    <section class="lead">
+
+      <h1 class="lead__title">Поиск по GitHub</h1>
+
+      <form class="lead__search search">
+        <input class="search__input" type="text" name="searchQuery" id="search-query"
+          placeholder="Введите поисковый запрос" value="" minlength="2" required>
+        <span class="search__input-error search__error" id="search-query-error"></span>
+        <button class="search__button" type="submit"></button>
+      </form>
+
+    </section>
+
+    <section class="result">
+
+    </section>
+
+    <div class="not-found hidden">
+      <p class="not-found__text">Ничего не найдено</p>
+      <img class="not-found__img" alt="Ничего не найденно" src="<%=require('./images/5541844.png')%>"></img>
+    </div>
+
+  </main>
+
+  <template id="card">
+    <div class="result__card">
+      <a class="result__card-link" href="#" target="_blank"></a>
+      <p class="result__card-owner-name"></p>
+      <p class="result__card-description"></p>
+    </div>
+  </template>
+
+</body>
+
+</html>

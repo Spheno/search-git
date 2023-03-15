@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2? family= Lora:wght@400;700 & display=swap');
+
+@import "./normalize";
+@import "./fonts";
+@import "./constants";
+@import "./lead";
+@import "./result";
+@import "./not-found";
+
+.page {
+  max-width: 1240px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: $backgroundColor;
+  color: $mainColor;
+  @extend %font;
+}
+
+.hidden {
+  display: none;
+}
